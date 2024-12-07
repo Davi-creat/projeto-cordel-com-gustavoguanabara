@@ -1,0 +1,167 @@
+@charset "UTF8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Ponnala&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Ponnala&family=Sriracha&display=swap');
+
+:root {
+    --fonte1: verdana, Gevana, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 227px;
+    width: 100%;
+    padding-bottom: 0px;
+}
+header h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    /*text-transform:uppercade letras maiores*/
+    font-size: 5em;
+    padding-bottom: 47px;
+    margin-bottom: 0px;
+    margin: 1px;
+    font-family: var(--fonte2);
+}
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-bottom: 50px;
+    
+   
+}
+nav p {
+    color: gray;
+    margin: 5px;
+    margin-top: -139px;
+    padding-left: 2px;
+}
+nav > a{
+    color: white;
+    text-decoration: none;
+    margin-top: -139px;
+    padding-left: 2px;
+    font-weight: bolder
+}
+nav > a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.0025s ease-in-out;
+
+ }
+ nav > a:hover {
+    text-decoration: underline;
+ } 
+ nav > a:hover::after {
+    width: 100%;
+}
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+.barra {
+    position: sticky;
+    top: 0px;
+    height: 10px;
+    width: 100%;
+    background-image: linear-gradient(to right, gray, transparent 50%)
+
+}
+.barra::before {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    animation: barrinhaanimada .20s linear infinite;
+    background: linear-gradient(to right, gray, transparent 50%);
+    background-size: 500%;
+ }
+ .barra::after {
+    content:" ";
+    position: absolute;
+    inset: 0;
+    background: (to right, gray, transparent 50%);
+    animation: barrinhaanimada .20s linear infinite;
+    background-size: 500%;
+    filter: blur(25px);
+ }
+.normal {
+    background-color: white;
+    color: black;
+}
+.imagem {
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+}
+.imagem > p{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: white;
+    text-shadow: 1px 1px 0px black ;
+}
+#girassol {
+    background-image: url(imagens/background001.jpg) ;
+    
+    
+}
+#livro {
+    background-image: url(imagens/background002.jpg);
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+footer  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+footer a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+@keyframes barrinhaanimada {
+    0%{
+        background-position: 0 0;
+     }
+     0%{
+        background-position: 500% 0;
+     }
+  
+}
